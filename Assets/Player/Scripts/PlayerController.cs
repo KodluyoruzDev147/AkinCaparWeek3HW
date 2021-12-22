@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +24,13 @@ public class PlayerController : MonoBehaviour
 
     private void SwerveControl()
     {
+        /* ZTK was here
+         * Input sistemi oyun kategorisine güzel uymuş.
+         * Tavsiyem input olaylarını tamamen oyun kodu içerisinden ayrık tutmak.
+         * Player controller mouse u okumaya çalışmasa da bunun sorumlusu bir InputManager gibi bir class olsa
+         * Player mouse un ne kadar hareket etmiş olduğunu InputManager üzerinden sorgulasa, oyun kodunu sistem kodundan güzel bir şekilde ayırmış olursun.
+         * Kod daha okunaklı olur.
+         */
         if (Input.GetMouseButtonDown(0))
         {
             lastMousePosition = Input.mousePosition;
