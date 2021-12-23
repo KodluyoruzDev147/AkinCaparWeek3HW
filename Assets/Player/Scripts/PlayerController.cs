@@ -31,6 +31,9 @@ public class PlayerController : MonoBehaviour
          * Player mouse un ne kadar hareket etmiş olduğunu InputManager üzerinden sorgulasa, oyun kodunu sistem kodundan güzel bir şekilde ayırmış olursun.
          * Kod daha okunaklı olur.
          */
+
+        //Yorumlarınızı okudum ama stack işini çözmekten henüz burayı düzeltmeye girişemedim. -Akın
+
         if (Input.GetMouseButtonDown(0))
         {
             lastMousePosition = Input.mousePosition;
