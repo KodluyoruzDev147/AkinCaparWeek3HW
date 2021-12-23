@@ -5,7 +5,7 @@ using UnityEngine;
 public class CubeManager : MonoBehaviour
 {
     public static CubeManager instance;
-    public List<GameObject> cubesStack;// = new List<GameObject>();
+    public List<GameObject> cubesStack;
 
     private void Awake()
     {
@@ -23,16 +23,13 @@ public class CubeManager : MonoBehaviour
     }
 
 
-    //hocam bu StackUp methodu ilk stacklenen küpte çalışıyor devamında çalışmıyor. StackManager'da çaşırıyorum bu methodu. -Akin.
     public void StackUp(GameObject cube)
     {
-        for (int i = 0; i == cubesStack.Count - 1; i++)
+        foreach(GameObject _cube in cubesStack)
         {
-            Debug.Log("stackup çalıştı");
-            Vector3 currentCubePos = cubesStack[i].transform.localPosition;
+            Vector3 currentCubePos = _cube.transform.localPosition;
             currentCubePos.y += 2f;
-            cubesStack[i].transform.localPosition = currentCubePos;
-
+            _cube.transform.localPosition = currentCubePos;
         }
     }
 

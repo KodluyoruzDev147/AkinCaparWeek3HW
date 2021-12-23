@@ -8,7 +8,6 @@ public class StackTrigger : MonoBehaviour
     {
         if(other.tag == "Cube")
         {
-            Debug.Log("TRIGGERED SORUN YOK");
             StackManager.instance.Stack(other.gameObject);
         }
     }
