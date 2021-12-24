@@ -38,7 +38,6 @@ public class StackManager : MonoBehaviour
 
     public void FillEmptyRoad(GameObject emptyRoadCube)
     {
-        emptyRoadCube.GetComponent<Collider>().enabled = false;
         int firstCubeToRoad = CubeManager.instance.cubesStack.Count() - 1;
         CubeManager.instance.StackDown();
         CubeManager.instance.cubesStack[firstCubeToRoad].transform.parent = emptyRoadCubes.transform;

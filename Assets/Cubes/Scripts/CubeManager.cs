@@ -46,6 +46,7 @@ public class CubeManager : MonoBehaviour
 
     public void BuildEmptyRoad(GameObject emptyRoadCube)
     {
+        emptyRoadCube.GetComponent<Collider>().enabled = false;
         int firstCubeToRoad = cubesStack.Count() - 1;
         Vector3 firstCubeToRoadPos = emptyRoadCube.transform.localPosition;
         cubesStack[firstCubeToRoad].transform.localPosition = firstCubeToRoadPos;
