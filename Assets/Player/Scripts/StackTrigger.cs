@@ -10,5 +10,10 @@ public class StackTrigger : MonoBehaviour
         {
             StackManager.instance.Stack(other.gameObject);
         }
+
+        if(other.tag == "Empty Road")
+        {
+            StackManager.instance.FillEmptyRoad(other.gameObject);
+        }
     }
 }

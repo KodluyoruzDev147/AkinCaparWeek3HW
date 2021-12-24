@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CubeManager : MonoBehaviour
@@ -23,7 +24,7 @@ public class CubeManager : MonoBehaviour
     }
 
 
-    public void StackUp(GameObject cube)
+    public void StackUp()
     {
         foreach(GameObject _cube in cubesStack)
         {
@@ -33,6 +34,24 @@ public class CubeManager : MonoBehaviour
         }
     }
 
+    public void StackDown()
+    {
+        foreach(GameObject _cube in cubesStack)
+        {
+            Vector3 currentCubePos = _cube.transform.localPosition;
+            currentCubePos.y -= 2f;
+            _cube.transform.localPosition = currentCubePos;
+        }
+    }
+
+    public void BuildEmptyRoad(GameObject emptyRoadCube)
+    {
+        int firstCubeToRoad = cubesStack.Count() - 1;
+        Vector3 firstCubeToRoadPos = emptyRoadCube.transform.localPosition;
+        cubesStack[firstCubeToRoad].transform.localPosition = firstCubeToRoadPos;
+        cubesStack.Remove(cubesStack[firstCubeToRoad]);
+
+    }
 
 
 }

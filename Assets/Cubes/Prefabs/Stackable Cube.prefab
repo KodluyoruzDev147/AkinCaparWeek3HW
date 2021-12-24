@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3565173851911481384}
   - component: {fileID: 3565173851911481387}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Stackable Cube
   m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
